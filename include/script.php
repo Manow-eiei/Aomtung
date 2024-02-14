@@ -13,10 +13,23 @@
 <style>
 
 .btn-pink {
-    background: #FF8686;
-    border-radius: 20px;
+    background: linear-gradient(90deg, #FF8686 33.4%, #FF8686 96.4%);   
     color: white;
 }
+
+
+        .otp-input {
+            width: 30px; /* ปรับความกว้างตามต้องการ */
+            text-align: center;
+            margin: 0 5px; /* ปรับความระยะห่างระหว่างช่อง input */
+            border: 2px solid #FF8686; /* กำหนดสีของกรอบเป็นสีชมพู */
+            border-radius: 5px; /* กำหนดขอบมนเป็นวงรี */
+        }
+
+        .otp-input:focus {
+            outline: none; /* ลบเส้นขีดสีน้ำเงินเวลากด focus */
+            border-color: #FF8686; /* เปลี่ยนสีขอบเป็นชมพูเมื่อ focus */
+        }
 
 *,
 h1,
