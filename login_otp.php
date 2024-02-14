@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container-fluid" style="text-align: center; margin-top: 50px;">
-    <img src="img/logo.png" alt="Logo" width="350">
+    <img src="img/logo.png" alt="Logo" width="270">
         <h5>ระบุรหัส OTP ที่ได้รับจากเบอร์</h5>
         <br>
         <input type="text" class="otp-input" maxlength="1" oninput="focusNext(this)">
@@ -18,8 +18,9 @@
         <input type="text" class="otp-input" maxlength="1" oninput="focusNext(this)">
         <input type="text" class="otp-input" maxlength="1" oninput="focusNext(this)">
         <input type="text" class="otp-input" maxlength="1" oninput="focusNext(this)">
-
-        <br>
+        <br><br>
+       <h6> <i class="bi bi-arrow-repeat"></i> ส่งรหัส OTP อีกครั้ง</h6>
+      
         <a class="btn btn-pink " href="#" style="width: 320px; margin-top: 20px;">ยืนยัน</a>
     </div>
 

@@ -13,15 +13,13 @@
 <style>
 
 .btn-pink {
-    background: linear-gradient(90deg, #FF8686 33.4%, #FF8686 96.4%);   
-    color: white;
+            background: linear-gradient(90deg, #FF8686 33.4%, #FF8686 96.4%);   
+            color: white;
 }
 
-.input {
-    border: 1px solid #FF8686; 
-    border-radius: 5px;
-}
-        .otp-input {
+
+       
+.otp-input {
             width: 40px; /* ปรับความกว้างตามต้องการ */
             height: 40px; /* ปรับความสูงตามต้องการ */
             text-align: center;
@@ -31,7 +29,7 @@
             font-size: 18px; /* ปรับขนาดตัวอักษร */
         }
 
-        .otp-input:focus {
+.otp-input:focus {
             outline: none; /* ลบเส้นขีดสีน้ำเงินเวลากด focus */
             border-color: #FF8686; /* เปลี่ยนสีขอบเป็นชมพูเมื่อ focus */
         }
