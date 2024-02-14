@@ -20,7 +20,7 @@
         <input type="text" class="otp-input" maxlength="1" oninput="focusNext(this)">
 
         <br>
-        <a class="btn btn-pink" href="#" style="width: 200px; margin-top: 20px;">ยืนยัน</a>
+        <a class="btn btn-pink " href="#" style="width: 320px; margin-top: 20px;">ยืนยัน</a>
     </div>
 
     <script>
@@ -37,5 +37,8 @@
             }
         }
     </script>
+    <?php
+        include("include/footer.php")
+    ?>
 </body>
 </html>

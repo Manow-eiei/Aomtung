@@ -17,13 +17,18 @@
     color: white;
 }
 
-
+.input {
+    border: 1px solid #FF8686; 
+    border-radius: 5px;
+}
         .otp-input {
-            width: 30px; /* ปรับความกว้างตามต้องการ */
+            width: 40px; /* ปรับความกว้างตามต้องการ */
+            height: 40px; /* ปรับความสูงตามต้องการ */
             text-align: center;
-            margin: 0 5px; /* ปรับความระยะห่างระหว่างช่อง input */
-            border: 2px solid #FF8686; /* กำหนดสีของกรอบเป็นสีชมพู */
-            border-radius: 5px; /* กำหนดขอบมนเป็นวงรี */
+            margin: 0 5px;
+            border: 1px solid #FF8686;
+            border-radius: 5px;
+            font-size: 18px; /* ปรับขนาดตัวอักษร */
         }
 
         .otp-input:focus {
