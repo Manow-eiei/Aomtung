@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/46d84e83e2.js" crossorigin="anonymous"></script>
+    <script src="includes/jquery-3.6.4.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+ 
+
+    <style>
+        .otp-input {
+            width: 40px;
+            /* ปรับความกว้างตามต้องการ */
+            height: 40px;
+            /* ปรับความสูงตามต้องการ */
+            text-align: center;
+            margin: 0 5px;
+            border: 2px solid #FF8686;
+            border-radius: 5px;
+            font-size: 18px;
+            /* ปรับขนาดตัวอักษร */
+        }
+
+        .otp-input:focus {
+            outline: none;
+            border-color: #FF8686;
+        }
+
+        .submit-btn {
+            width: 200px;
+            margin-top: 10px;
+        }
+
+        *,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Prompt', sans-serif;
+        }
+
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 2rem;
+        }
+
+
+        /* Bootstrap Add-On (BEM-syntax)
+_________________________________________ */
+
+        .form-control--otp {
+            line-height: 2.5;
+            height: 3.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+
+        @media (min-width: 375px) {
+            .form-control--otp {
+                line-height: 3;
+                height: 4.5rem;
+                font-size: 2rem;
+                font-weight: bold;
+                text-align: center;
+                max-width: 3.5rem;
+                border: 2px solid #FF8686;
+            }
+        }
+
+        .input-group-seperator {
+            width: 2rem;
+            margin-left: 0.75rem;
+            margin-right: 0.75rem;
+            height: 0.3rem;
+            background: #ced4da;
+            border-radius: 0.1rem;
+        }
+    </style>
+
+  
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.png" alt="Logo" width="50px" >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">หน้าหลัก</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">รายรับ-รายจ่าย</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">บันทึกรายรับ-รายจ่าย</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">บันทึกอัตโนมัติ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown link
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                       
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container-fluid text-center">
+        <h5>ระบุรหัส OTP ที่ได้รับจากเบอร์</h5>
+
+        <input type="text" class="otp-input" maxlength="1" oninput="focusNext(this)">
+        <input type="text" class="otp-input" maxlength="1" oninput="focusNext(this)">
+        <input type="text" class="otp-input" maxlength="1" oninput="focusNext(this)">
+        <input type="text" class="otp-input" maxlength="1" oninput="focusNext(this)">
+        <input type="text" class="otp-input" maxlength="1" oninput="focusNext(this)">
+        <input type="text" class="otp-input" maxlength="1" oninput="focusNext(this)">
+
+        <br>
+        <button class="btn btn-pink submit-btn" onclick="submitOtp()">ยืนยัน</button>
+    </div>
+
+    <hr>
+    <div class="container">
+        <h1 class="h3 text-center font-weight-light mb-4">ระบุรหัส OTP ที่ได้รับจากเบอร์</h1>
+        <form>
+            <fieldset>
+                <div class="d-flex align-items-center justify-content-center">
+                    <div class="input-group justify-content-end flex-nowrap">
+                        <input type="text" class="form-control form-control--otp js-otp-input" inputmode="numeric"
+                            pattern="[0-9]*" autocomplete="one-time-code" required>
+                        <input type="text" class="form-control form-control--otp js-otp-input" inputmode="numeric"
+                            pattern="[0-9]*" required>
+                        <input type="text" class="form-control form-control--otp js-otp-input" inputmode="numeric"
+                            pattern="[0-9]*" required>
+                    </div>
+
+                    <div class="input-group flex-nowrap">
+                        <input type="text" class="form-control form-control--otp js-otp-input" inputmode="numeric"
+                            pattern="[0-9]*" required>
+                        <input type="text" class="form-control form-control--otp js-otp-input" inputmode="numeric"
+                            pattern="[0-9]*" required>
+                        <input type="text" class="form-control form-control--otp js-otp-input" inputmode="numeric"
+                            pattern="[0-9]*" required>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <script>
+
+        var BACKSPACE_KEY = 8;
+        var ENTER_KEY = 13;
+        var TAB_KEY = 9;
+        var LEFT_KEY = 37;
+        var RIGHT_KEY = 39;
+        var ZERO_KEY = 48;
+        var NINE_KEY = 57;
+
+        function otp(elementId) {
+            var inputs = document.querySelectorAll('.js-otp-input');
+            var callback = null;
+
+            function init(completeCallback) {
+                callback = completeCallback;
+                for (i = 0; i < inputs.length; i++) {
+                    registerEvents(i, inputs[i]);
+                }
+            }
+
+            function destroy() {
+                for (i = 0; i < inputs.length; i++) {
+                    registerEvents(i, inputs[i]);
+                }
+            }
+
+            function registerEvents(index, element) {
+                element.addEventListener("input", function (ev) {
+                    onInput(index, ev);
+                });
+                element.addEventListener("paste", function (ev) {
+                    onPaste(index, ev);
+                });
+                element.addEventListener("keydown", function (ev) {
+                    onKeyDown(index, ev);
+                });
+            }
+
+            function onPaste(index, ev) {
+                ev.preventDefault();
+                var curIndex = index;
+                var clipboardData = ev.clipboardData || window.clipboardData;
+                var pastedData = clipboardData.getData("Text");
+                for (i = 0; i < pastedData.length; i++) {
+                    if (i < inputs.length) {
+                        if (!isDigit(pastedData[i])) break;
+                        inputs[curIndex].value = pastedData[i];
+                        curIndex++;
+                    }
+                }
+                if (curIndex == inputs.length) {
+                    inputs[curIndex - 1].focus();
+                    callback(retrieveOTP());
+                } else {
+                    inputs[curIndex].focus();
+                }
+            }
+
+            function onKeyDown(index, ev) {
+                var key = ev.keyCode || ev.which;
+                if (key == LEFT_KEY && index > 0) {
+                    ev.preventDefault(); // prevent cursor to move before digit in input
+                    inputs[index - 1].focus();
+                }
+                if (key == RIGHT_KEY && index + 1 < inputs.length) {
+                    ev.preventDefault();
+                    inputs[index + 1].focus();
+                }
+                if (key == BACKSPACE_KEY && index > 0) {
+                    if (inputs[index].value == "") {
+                        // Empty and focus previous input and current input is empty
+                        inputs[index - 1].value = "";
+                        inputs[index - 1].focus();
+                    } else {
+                        inputs[index].value = "";
+                    }
+                }
+                if (key == ENTER_KEY) {
+                    // force submit if enter is pressed
+                    ev.preventDefault();
+                    if (isOTPComplete()) {
+                        callback(retrieveOTP());
+                    }
+                }
+                if (key == TAB_KEY && index == inputs.length - 1) {
+                    // force submit if tab pressed on last input
+                    ev.preventDefault();
+                    if (isOTPComplete()) {
+                        callback(retrieveOTP());
+                    }
+                }
+            }
+
+            function onInput(index, ev) {
+                var value = ev.data || ev.target.value;
+                var curIndex = index;
+                for (i = 0; i < value.length; i++) {
+                    if (i < inputs.length) {
+                        if (!isDigit(value[i])) {
+                            inputs[curIndex].value = "";
+                            break;
+                        }
+                        inputs[curIndex++].value = value[i];
+                        if (curIndex == inputs.length) {
+                            if (isOTPComplete()) {
+                                callback(retrieveOTP());
+                            }
+                        } else {
+                            inputs[curIndex].focus();
+                        }
+                    }
+                }
+            }
+
+            function retrieveOTP() {
+                var otp = "";
+                for (i = 0; i < inputs.length; i++) {
+                    otp += inputs[i].value;
+                }
+                return otp;
+            }
+
+            function isDigit(d) {
+                return d >= "0" && d <= "9";
+            }
+
+            function isOTPComplete() {
+                var isComplete = true;
+                var i = 0;
+                while (i < inputs.length && isComplete) {
+                    if (inputs[i].value == "") {
+                        isComplete = false;
+                    }
+                    i++;
+                }
+                return isComplete;
+            }
+
+            return {
+                init: init
+            };
+        }
+
+        var otpModule = otp("otp-inputs");
+        otpModule.init(function (passcode) { });
+    </script>
+</body>
+
+    <!-- font Prompt from google  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+</html>
