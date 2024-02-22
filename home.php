@@ -97,7 +97,7 @@
 
                     <div class="card-body">
                         <div>
-                              <canvas id="myChart" style="width: 300px; height: 150px;"></canvas>
+                              <canvas id="myChart" ></canvas>
                         </div>
                         <!-- <div class="chart-doughnut">
                             <canvas id="doughnut" style="width: 50%;" ></canvas>
