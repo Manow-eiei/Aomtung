@@ -96,13 +96,44 @@
                     </div>
 
                     <div class="card-body">
-                        <div class="chart-doughnut">
-                            <canvas id="doughnut" style="width: 100%; height: 300px;"></canvas>
+                        <div>
+                              <canvas id="myChart" style="width: 300px; height: 150px;"></canvas>
                         </div>
+                        <!-- <div class="chart-doughnut">
+                            <canvas id="doughnut" style="width: 50%;" ></canvas>
+                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
+
+        <div>
+            <canvas id="myChart"></canvas>
+        </div>
+
+        <script>
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                // labels: ['Red', 'Yellow' , 'Blue'],
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [15000, 2500, 500, 8000, 2700, 1500],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        </script>
     </div>
 
     <?php
