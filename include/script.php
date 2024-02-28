@@ -26,8 +26,20 @@
     color: #FF8686;
 }
 
-.text-blue {
+.text-darkblue {
+    color: #064F6C;
+}
 
+.text-lightblue{
+    color: #6DBAD8;
+}
+
+.text-darkpink {
+    color: #E85757;
+}
+
+.text-yellow {
+    color: #E3C529;
 }
 
 .otp-input {
