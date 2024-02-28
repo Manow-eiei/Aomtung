@@ -24,8 +24,6 @@
             <a class="btn btn-pink " href="login_otp.php" style="width: 220px; ">ยืนยัน</a>
         </div>
     </center>
-
-
     <?php
     include("include/footer.php")
     ?>

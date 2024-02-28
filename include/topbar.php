@@ -9,10 +9,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">หน้าหลัก</a>
+                    <a class="nav-link active" aria-current="page" href="home.php">หน้าหลัก</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">รายรับ-รายจ่าย</a>
+                    <a class="nav-link" href="listin_ex.php">รายรับ-รายจ่าย</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">บันทึกรายรับ-รายจ่าย</a>

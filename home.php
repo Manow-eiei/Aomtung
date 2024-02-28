@@ -60,6 +60,7 @@
                         </div>
                     </div>
 
+
                     <div class="col-xl-3 col-md-6 mb-4">
                         <div class="card  shadow h-100 py-2">
                             <div class="card-body">
@@ -97,11 +98,8 @@
 
                     <div class="card-body">
                         <div>
-                              <canvas id="myChart" ></canvas>
+                            <canvas id="myChart"></canvas>
                         </div>
-                        <!-- <div class="chart-doughnut">
-                            <canvas id="doughnut" style="width: 50%;" ></canvas>
-                        </div> -->
                     </div>
                 </div>
             </div>

@@ -26,6 +26,9 @@
     color: #FF8686;
 }
 
+.text-blue {
+
+}
 
 .otp-input {
     width: 40px;

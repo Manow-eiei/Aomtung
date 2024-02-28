@@ -30,7 +30,7 @@
         <br><br>
         <h6> <i class="bi bi-arrow-repeat"></i> ส่งรหัส OTP อีกครั้ง</h6>
 
-        <a class="btn btn-pink " href="#" style="width: 320px; margin-top: 20px;">ยืนยัน</a>
+        <a class="btn btn-pink " href="home.php" style="width: 320px; margin-top: 20px;">ยืนยัน</a>
     </div>
 
     <script>

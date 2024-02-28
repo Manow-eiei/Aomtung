@@ -61,23 +61,24 @@
      
 
         var densityData = {
-            label: 'Density of Planet (kg/m3)',
-            data: [5427, 5243, 5514, 3933, 1326, 687, 1271, 1638],
-            backgroundColor: 'rgba(0, 99, 132, 0.6)',
-            borderColor: 'rgba(0, 99, 132, 1)',
+            label: 'รายรับ',
+            data: [500, 1500, 600, 1000, 2400, 500, 100, 300, 500, 1500, 300, 2200],
+            backgroundColor: 'rgba(129, 200, 228, 1)',
+            borderColor: '#81C8E4',
             yAxisID: "y-axis-density"
         };
+     
 
         var gravityData = {
-            label: 'Gravity of Planet (m/s2)',
-            data: [3.7, 8.9, 9.8, 3.7, 23.1, 9.0, 8.7, 11.0],
-            backgroundColor: 'rgba(99, 132, 0, 0.6)',
-            borderColor: 'rgba(99, 132, 0, 1)',
+            label: 'รายจ่าย',
+            data: [2500, 700, 450, 700, 2100, 700, 500, 750, 1200, 1800, 900, 1900],
+            backgroundColor: 'rgba(255, 134, 134, 1)',
+            borderColor: '#81C8E4',
             yAxisID: "y-axis-gravity"
         };
 
         var planetData = {
-            labels: ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"],
+            labels: ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."],
             datasets: [densityData, gravityData]
         };
 
