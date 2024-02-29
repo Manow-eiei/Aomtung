@@ -93,19 +93,11 @@
                         </div>
                     </div>
                 </div>
-
-                
-
             </div>
-
-
-
-
 
 
             <div class="col-xl-6 col-md-6 mb-4">
                 <div class="container">
-
                     <!-- <div class="col-8 mx-2">
                             <h4 class="fw-bold mb-0 ">รายการย้อนหลัง</h4>
                         </div> -->

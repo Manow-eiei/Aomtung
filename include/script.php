@@ -15,6 +15,10 @@
     integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous">
 </script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- 
+/// cdn graph -->
+<link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/charts/chart-5/assets/css/chart-5.css">
 
 <style>
 .btn-pink {
@@ -40,6 +44,10 @@
 
 .text-yellow {
     color: #E3C529;
+}
+
+.text-red {
+    color: #DF4D4D;
 }
 
 .otp-input {
