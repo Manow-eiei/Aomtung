@@ -16,11 +16,11 @@
     <input type="text" class="form-control" id="number" name="number" placeholder="หน้าตาดี ทรัพย์จาง " style="width: 250px; border: 1px solid #FF8686; border-radius: 5px;">
 </center>
 
-    <button type="button" class="btn btn-link" style="color: black;">ข้าม</button>
+    <a href="home.php" class="btn btn-link" style="color: black;">ข้าม</a>
 
 
    <br><br><br>
-    <a class="btn btn-pink " href="#" style="width: 250px; ">ยืนยัน</a>
+    <a class="btn btn-pink " href="home.php" style="width: 250px; ">ยืนยัน</a>
 </div>
 </center> 
 
