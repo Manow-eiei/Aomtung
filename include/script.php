@@ -38,6 +38,10 @@
     color: #6DBAD8;
 }
 
+.text-seablue{
+    color: #0589BD;
+}
+
 .text-darkpink {
     color: #E85757;
 }

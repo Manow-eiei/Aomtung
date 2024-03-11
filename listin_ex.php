@@ -76,11 +76,11 @@
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col-auto d-flex">
-                                <h5 class="fw-bold mb-0 text-lightblue">รายรับ</h5>
+                                <h5 class="fw-bold mb-0 text-seablue">รายรับ</h5>
                             </div>
 
                             <div class="col mr-2 d-flex justify-content-end">
-                                <div class="fw-bold h5 text-lightblue">10,000.00 ฿</div>
+                                <div class="fw-bold h5 text-seablue">10,000.00 ฿</div>
                             </div>
                             <div class="w-100"></div>
                             <div class="col-auto d-flex">

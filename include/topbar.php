@@ -27,7 +27,7 @@
                         <i class="bi bi-person-circle"></i> หน้าตาดี ทรัพย์จาง
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#"><i class="bi bi-gear-wide-connected"></i> ตั้งค่าบัญชี</a>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-gear-fill"></i> ตั้งค่าบัญชี</a>
                         </li>
                         <li>
                             <a class="dropdown-item text-danger" href="#">
