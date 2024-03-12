@@ -21,6 +21,35 @@
 <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/charts/chart-5/assets/css/chart-5.css">
 
 <style>
+    
+.input-group-seperator {
+    width: 2rem;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    height: 0.3rem;
+    background: #ced4da;
+    border-radius: 0.1rem;
+}
+
+.custom-radio {
+    color: #81C8E4;
+    border-color: #81C8E4;
+    transition: background-color 0.3s;
+}
+
+.custom-radio.active-color-1 {
+    background-color: transparent;
+    border-color: #81C8E4;
+    color: #81C8E4;
+}
+
+.custom-radio.active-color-2 {
+    background-color: #FF8686;
+    border-color: #FF8686;
+    color: white;
+}
+
+
 .btn-pink {
     background: linear-gradient(90deg, #FF8686 33.4%, #FF8686 96.4%);
     color: white;
@@ -34,11 +63,11 @@
     color: #064F6C;
 }
 
-.text-lightblue{
-    color: #6DBAD8;
+.text-lightblue {
+    color: #81C8E4;
 }
 
-.text-seablue{
+.text-seablue {
     color: #0589BD;
 }
 

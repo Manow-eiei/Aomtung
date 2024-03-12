@@ -18,7 +18,7 @@
                     <a class="nav-link" href="#">บันทึกรายรับ-รายจ่าย</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">บันทึกอัตโนมัติ</a>
+                    <a class="nav-link" href="auto_save.php">บันทึกอัตโนมัติ</a>
                 </li>
                 
                 <li class="nav-item dropdown ">

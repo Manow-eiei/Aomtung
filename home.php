@@ -80,11 +80,12 @@
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-center">
                         <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                             <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off"
-                                checked>
-                            <label class="btn btn-outline-dark btn-block" for="btnradio1">รายรับ</label>
+                                checked onclick="changeColor('btnradio1')">
+                            <label class="btn btn-outline-secondary" for="btnradio1">รายรับ</label>
 
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                            <label class="btn btn-outline-danger btn-block" for="btnradio2">รายจ่าย</label>
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off"
+                                onclick="changeColor('btnradio2')">
+                            <label class="btn btn-outline-secondary" for="btnradio2">รายจ่าย</label>
                         </div>
                     </div>
                     <div class="card-body">
@@ -176,7 +177,7 @@
                         </div>
                     </div>
                 </div>
-                <hr>
+                <br>
                 <div class="card border-left-primary ">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
@@ -224,20 +225,43 @@
         </div>
     </div>
     <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        changeColor('btnradio1');
+    });
+
+    function changeColor(radioId) {
+        var radioElement = document.getElementById(radioId);
+        var labelElement = radioElement.nextElementSibling;
+
+        if (radioId === 'btnradio1' && radioElement.checked) {
+            labelElement.style.backgroundColor = '#81C8E4';
+            labelElement.style.borderColor = '#81C8E4';
+            document.getElementById('btnradio2').nextElementSibling.style.backgroundColor = 'transparent';
+            document.getElementById('btnradio2').nextElementSibling.style.borderColor = '#ced4da';
+        } else if (radioId === 'btnradio2' && radioElement.checked) {
+            labelElement.style.backgroundColor = '#FF8686';
+            labelElement.style.borderColor = '#FF8686';
+            document.getElementById('btnradio1').nextElementSibling.style.backgroundColor = 'transparent';
+            document.getElementById('btnradio1').nextElementSibling.style.borderColor = '#ced4da';
+        }
+    }
     const ctx = document.getElementById('myChart');
 
     new Chart(ctx, {
         type: 'doughnut',
         data: {
-            // labels: ['Red', 'Yellow' , 'Blue'],
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: ['รายรับ', 'รายจ่าย'],
             datasets: [{
-                label: '# of Votes',
-                data: [15000, 2500, 500, 8000, 2700, 1500],
-                borderWidth: 1
+                label: 'จำนวนเงิน',
+                data: [5000, 5000],
+                borderWidth: 1,
+                backgroundColor: ['#05658B', '#B4E2F4']
+                // กำหนดสีของแต่ละส่วนของ Doughnut Chart
             }]
         },
         options: {
+            cutoutPercentage: 50, // กำหนดเปอร์เซ็นต์ของรัศมีที่จะถูกตัดออก
+            responsive: true, // ทำให้กราฟปรับขนาดตามขนาดหน้าจอ
             scales: {
                 y: {
                     beginAtZero: true
