@@ -21,7 +21,6 @@
 <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/charts/chart-5/assets/css/chart-5.css">
 
 <style>
-    
 .input-group-seperator {
     width: 2rem;
     margin-left: 0.75rem;
@@ -102,6 +101,7 @@
     border-color: #FF8686;
     /* เปลี่ยนสีขอบเป็นชมพูเมื่อ focus */
 }
+
 
 *,
 h1,

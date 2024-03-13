@@ -33,8 +33,6 @@
                 </div>
                 <br>
 
-
-
                 <div class="row row-cols-1 row-cols-lg-2 g-2 g-lg-4">
                     <div class="col-6">
                         <div class="card border-left-primary ">
@@ -81,7 +79,7 @@
                         <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                             <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off"
                                 checked onclick="changeColor('btnradio1')">
-                            <label class="btn btn-outline-secondary" for="btnradio1">รายรับ</label>
+                            <label class="btn btn-outline-secondary " for="btnradio1">รายรับ</label>
 
                             <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off"
                                 onclick="changeColor('btnradio2')">
@@ -230,27 +228,47 @@
     });
 
     function changeColor(radioId) {
-        var radioElement = document.getElementById(radioId);
-        var labelElement = radioElement.nextElementSibling;
+    var radioElement = document.getElementById(radioId);
+    var labelElement = radioElement.nextElementSibling;
 
-        if (radioId === 'btnradio1' && radioElement.checked) {
-            labelElement.style.backgroundColor = '#81C8E4';
-            labelElement.style.borderColor = '#81C8E4';
-            document.getElementById('btnradio2').nextElementSibling.style.backgroundColor = 'transparent';
-            document.getElementById('btnradio2').nextElementSibling.style.borderColor = '#ced4da';
-        } else if (radioId === 'btnradio2' && radioElement.checked) {
-            labelElement.style.backgroundColor = '#FF8686';
-            labelElement.style.borderColor = '#FF8686';
-            document.getElementById('btnradio1').nextElementSibling.style.backgroundColor = 'transparent';
-            document.getElementById('btnradio1').nextElementSibling.style.borderColor = '#ced4da';
-        }
+    let labels;
+    let data;
+    let backgroundColors;
+
+    if (radioId === 'btnradio1' && radioElement.checked) {
+        labelElement.style.backgroundColor = '#81C8E4';
+        labelElement.style.borderColor = '#81C8E4';
+        document.getElementById('btnradio2').nextElementSibling.style.backgroundColor = 'transparent';
+        document.getElementById('btnradio2').nextElementSibling.style.borderColor = '#ced4da';
+        labels = ['รายรับแน่นอน', 'รายรับไม่แน่นอน'];
+        data = [5000, 5000];
+        backgroundColors = ['#05658B', '#B4E2F4'];
+    } else if (radioId === 'btnradio2' && radioElement.checked) {
+        labelElement.style.backgroundColor = '#FF8686';
+        labelElement.style.borderColor = '#FF8686';
+        document.getElementById('btnradio1').nextElementSibling.style.backgroundColor = 'transparent';
+        document.getElementById('btnradio1').nextElementSibling.style.borderColor = '#ced4da';
+
+        // กำหนด labels, data, และสีสำหรับกราฟเมื่อเป็นรายจ่าย
+        labels = ['รายจ่ายจำเป็น', 'รายจ่ายไม่จำเป็น'];
+        data = [4000, 6000];
+        backgroundColors = ['#F56C6C', '#F8ED75'];
     }
+
+    myDoughnutChart.data.labels = labels;
+    myDoughnutChart.data.datasets[0].data = data;
+    myDoughnutChart.data.datasets[0].backgroundColor = backgroundColors;
+    myDoughnutChart.update();
+}
+
+
+
     const ctx = document.getElementById('myChart');
 
-    new Chart(ctx, {
+    myDoughnutChart = new Chart(ctx, {
         type: 'doughnut',
         data: {
-            labels: ['รายรับ', 'รายจ่าย'],
+            labels: ['รายรับแน่นอน', 'รายรับไม่แน่นอน'],
             datasets: [{
                 label: 'จำนวนเงิน',
                 data: [5000, 5000],
