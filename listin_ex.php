@@ -61,10 +61,6 @@
 
             <div class="col-xl-6 col-md-6 mb-4">
                 <div class="container">
-
-                    <!-- <div class="col-8 mx-2">
-                            <h4 class="fw-bold mb-0 ">รายการย้อนหลัง</h4>
-                        </div> -->
                     <div class="row no-gutters align-items-center">
                         <h5 class="fw-bold mb-0 text-center">รายการย้อนหลัง</h5>
                     </div>
@@ -97,9 +93,7 @@
                             <div class="col mr-2 d-flex justify-content-end">
                                 <p class="fw-bold mb-0">1,000.00 ฿</p>
                             </div>
-
                             <hr>
-
                             <div class="col-auto d-flex">
                                 <h5 class="fw-bold text-red">รายจ่าย</h5>
                             </div>

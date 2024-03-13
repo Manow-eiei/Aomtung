@@ -8,10 +8,11 @@
     <?php include("include/script.php") ?>
 </head>
 
-<body>
+<body style="background-color: #F4FFFE;">
     <?php include("include/topbar.php") ?>
     <br>
-    <div class="container">
+
+    <div class="container" >
         <div class="row">
             <div class="col-lg-6 col-md-6 mb-4">
                 <div class="card border-left-primary ">
@@ -32,7 +33,6 @@
                     </div>
                 </div>
                 <br>
-
                 <div class="row row-cols-1 row-cols-lg-2 g-2 g-lg-4">
                     <div class="col-6">
                         <div class="card border-left-primary ">
@@ -72,18 +72,16 @@
                     </div>
                 </div>
                 <br>
-
-
                 <div class="card border-left-primary ">
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-center">
-                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                        <div class="btn-group w-100" role="group" aria-label="Basic radio toggle button group">
                             <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off"
                                 checked onclick="changeColor('btnradio1')">
-                            <label class="btn btn-outline-secondary " for="btnradio1">รายรับ</label>
+                            <label class="btn btn-outline-secondary btn-lg" for="btnradio1">รายรับ</label>
 
                             <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off"
                                 onclick="changeColor('btnradio2')">
-                            <label class="btn btn-outline-secondary" for="btnradio2">รายจ่าย</label>
+                            <label class="btn btn-outline-secondary btn-lg" for="btnradio2">รายจ่าย</label>
                         </div>
                     </div>
                     <div class="card-body">
@@ -94,7 +92,7 @@
                 </div>
             </div>
 
-            <div class="col-xl-6 col-md-6 mb-4">
+            <div class="col-xl-6 col-md-6 mb-4 custom-frame">
                 <div class="container">
                     <div class="row no-gutters align-items-center">
                         <div class="col-auto d-flex">
@@ -128,90 +126,96 @@
                 </div>
 
                 <br>
+                <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" data-bs-smooth-scroll="true"
+                    class="scrollspy-example" tabindex="0" style="height: 700px; overflow-y: auto;">
+                    <div class="container">
+                        <div class="card border-left-primary ">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col-auto d-flex">
+                                        <h5 class="fw-bold mb-0 text-darkblue">รายรับแน่นอน</h5>
+                                    </div>
 
-                <div class="card border-left-primary ">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col-auto d-flex">
-                                <h5 class="fw-bold mb-0 text-darkblue">รายรับแน่นอน</h5>
-                            </div>
-
-                            <div class="col mr-2 d-flex justify-content-end">
-                                <div class="fw-bold h5 text-darkblue">+1,000.00 ฿</div>
-                            </div>
-                            <div class="w-100"></div>
-                            <div class="col-auto d-flex">
-                                <p class="fw-bold mb-0 ">เงินเดือน</p>
-                            </div>
-                            <div class="col mr-2 d-flex justify-content-end">
-                                <p class="fw-light mb-0">22/12/2023 11:17</p>
+                                    <div class="col mr-2 d-flex justify-content-end">
+                                        <div class="fw-bold h5 text-darkblue">+1,000.00 ฿</div>
+                                    </div>
+                                    <div class="w-100"></div>
+                                    <div class="col-auto d-flex">
+                                        <p class="fw-bold mb-0 ">เงินเดือน</p>
+                                    </div>
+                                    <div class="col mr-2 d-flex justify-content-end">
+                                        <p class="fw-light mb-0">22/12/2023 11:17</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <br>
-                <div class="card border-left-primary ">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col-auto d-flex">
-                                <h5 class="fw-bold mb-0 text-lightblue">รายรับไม่แน่นอน</h5>
-                            </div>
+                        <br>
+                        <div class="card border-left-primary ">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col-auto d-flex">
+                                        <h5 class="fw-bold mb-0 text-lightblue">รายรับไม่แน่นอน</h5>
+                                    </div>
 
-                            <div class="col mr-2 d-flex justify-content-end">
-                                <div class="fw-bold h5 text-lightblue">+500.00 ฿</div>
-                            </div>
+                                    <div class="col mr-2 d-flex justify-content-end">
+                                        <div class="fw-bold h5 text-lightblue">+500.00 ฿</div>
+                                    </div>
 
-                            <div class="w-100"></div>
-                            <div class="col-auto d-flex">
-                                <p class="fw-bold mb-0 ">เงินเดือน</p>
-                            </div>
-                            <div class="col mr-2 d-flex justify-content-end">
-                                <p class="fw-light mb-0">22/12/2023 11:17</p>
+                                    <div class="w-100"></div>
+                                    <div class="col-auto d-flex">
+                                        <p class="fw-bold mb-0 ">เงินเดือน</p>
+                                    </div>
+                                    <div class="col mr-2 d-flex justify-content-end">
+                                        <p class="fw-light mb-0">22/12/2023 11:17</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <br>
-                <div class="card border-left-primary ">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col-auto d-flex">
-                                <h5 class="fw-bold mb-0 text-darkpink">รายรับไม่แน่นอน</h5>
-                            </div>
+                        <br>
+                        <div class="card border-left-primary ">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col-auto d-flex">
+                                        <h5 class="fw-bold mb-0 text-darkpink">รายรับไม่แน่นอน</h5>
+                                    </div>
 
-                            <div class="col mr-2 d-flex justify-content-end">
-                                <div class="fw-bold h5 text-darkpink">-2,500.00 ฿</div>
-                            </div>
+                                    <div class="col mr-2 d-flex justify-content-end">
+                                        <div class="fw-bold h5 text-darkpink">-2,500.00 ฿</div>
+                                    </div>
 
-                            <div class="w-100"></div>
-                            <div class="col-auto d-flex">
-                                <p class="fw-bold mb-0 ">ค่าอาหาร</p>
-                            </div>
-                            <div class="col mr-2 d-flex justify-content-end">
-                                <p class="fw-light mb-0">22/12/2023 11:17</p>
+                                    <div class="w-100"></div>
+                                    <div class="col-auto d-flex">
+                                        <p class="fw-bold mb-0 ">ค่าอาหาร</p>
+                                    </div>
+                                    <div class="col mr-2 d-flex justify-content-end">
+                                        <p class="fw-light mb-0">22/12/2023 11:17</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <br>
-                <div class="card border-left-primary ">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col-auto d-flex">
-                                <h5 class="fw-bold mb-0 text-yellow">รายจ่ายไม่จำเป็น</h5>
-                            </div>
-                            <div class="col mr-2 d-flex justify-content-end">
-                                <div class="fw-bold h5 text-yellow">-500.00 ฿</div>
-                            </div>
+                        <br>
+                        <div class="card border-left-primary ">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col-auto d-flex">
+                                        <h5 class="fw-bold mb-0 text-yellow">รายจ่ายไม่จำเป็น</h5>
+                                    </div>
+                                    <div class="col mr-2 d-flex justify-content-end">
+                                        <div class="fw-bold h5 text-yellow">-500.00 ฿</div>
+                                    </div>
 
-                            <div class="w-100"></div>
-                            <div class="col-auto d-flex">
-                                <p class="fw-bold mb-0 ">บันเทิง</p>
-                            </div>
-                            <div class="col mr-2 d-flex justify-content-end">
-                                <p class="fw-light mb-0">22/12/2023 11:17</p>
+                                    <div class="w-100"></div>
+                                    <div class="col-auto d-flex">
+                                        <p class="fw-bold mb-0 ">บันเทิง</p>
+                                    </div>
+                                    <div class="col mr-2 d-flex justify-content-end">
+                                        <p class="fw-light mb-0">22/12/2023 11:17</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <br>
+
                     </div>
                 </div>
             </div>

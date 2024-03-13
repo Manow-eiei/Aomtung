@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Aomtung</title>
+    <title>Auto Save</title>
     <?php include("include/script.php") ?>
 </head>
 
@@ -12,10 +12,9 @@
     <?php include("include/topbar.php") ?>
     <br>
     <div class="container">
-        <h3 class="fw-bold text-center">บันทึกอัตโนมัติ</h3>
+        <h4 class="fw-bold text-center">บันทึกอัตโนมัติ</h4>
         <div class="row">
             <div class="container">
-
                 <div class="row no-gutters align-items-center">
                     <div class="col-auto d-flex">
                         <h5 class="fw-bold mb-0">รายการ</h5>
@@ -33,8 +32,6 @@
                                 <li><a class="dropdown-item" href="#">ทุกสัปดาห์</a></li>
                                 <li><a class="dropdown-item" href="#">ทุกเดือน</a></li>
                                 <li><a class="dropdown-item" href="#">ทุก 3 เดือน</a></li>
-
-                                <!-- Add more items as needed -->
                             </ul>
                         </div>
                     </div>
