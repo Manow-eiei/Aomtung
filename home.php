@@ -61,7 +61,7 @@
                                     </div>
                                     <div class="col mr-2 text-center">
                                         <div class="text-s font-weight-bold ">
-                                            รายรับ (บาท)</div>
+                                            รายจ่าย (บาท)</div>
                                         <div class="h3 mb-0 ">
                                             <span>2,000.00</span>
                                         </div>
@@ -94,12 +94,8 @@
                 </div>
             </div>
 
-
             <div class="col-xl-6 col-md-6 mb-4">
                 <div class="container">
-                    <!-- <div class="col-8 mx-2">
-                            <h4 class="fw-bold mb-0 ">รายการย้อนหลัง</h4>
-                        </div> -->
                     <div class="row no-gutters align-items-center">
                         <div class="col-auto d-flex">
                             <h5 class="fw-bold mb-0">รายการย้อนหลัง</h5>
@@ -124,7 +120,7 @@
                                     <li><a class="dropdown-item" href="#">ตุลาคม</a></li>
                                     <li><a class="dropdown-item" href="#">พฤศจิกายน</a></li>
                                     <li><a class="dropdown-item" href="#">ธันวาคม</a></li>
-                                    <!-- Add more items as needed -->
+
                                 </ul>
                             </div>
                         </div>
@@ -204,7 +200,6 @@
                             <div class="col-auto d-flex">
                                 <h5 class="fw-bold mb-0 text-yellow">รายจ่ายไม่จำเป็น</h5>
                             </div>
-
                             <div class="col mr-2 d-flex justify-content-end">
                                 <div class="fw-bold h5 text-yellow">-500.00 ฿</div>
                             </div>
@@ -228,40 +223,38 @@
     });
 
     function changeColor(radioId) {
-    var radioElement = document.getElementById(radioId);
-    var labelElement = radioElement.nextElementSibling;
+        var radioElement = document.getElementById(radioId);
+        var labelElement = radioElement.nextElementSibling;
 
-    let labels;
-    let data;
-    let backgroundColors;
+        let labels;
+        let data;
+        let backgroundColors;
 
-    if (radioId === 'btnradio1' && radioElement.checked) {
-        labelElement.style.backgroundColor = '#81C8E4';
-        labelElement.style.borderColor = '#81C8E4';
-        document.getElementById('btnradio2').nextElementSibling.style.backgroundColor = 'transparent';
-        document.getElementById('btnradio2').nextElementSibling.style.borderColor = '#ced4da';
-        labels = ['รายรับแน่นอน', 'รายรับไม่แน่นอน'];
-        data = [5000, 5000];
-        backgroundColors = ['#05658B', '#B4E2F4'];
-    } else if (radioId === 'btnradio2' && radioElement.checked) {
-        labelElement.style.backgroundColor = '#FF8686';
-        labelElement.style.borderColor = '#FF8686';
-        document.getElementById('btnradio1').nextElementSibling.style.backgroundColor = 'transparent';
-        document.getElementById('btnradio1').nextElementSibling.style.borderColor = '#ced4da';
+        if (radioId === 'btnradio1' && radioElement.checked) {
+            labelElement.style.backgroundColor = '#81C8E4';
+            labelElement.style.borderColor = '#81C8E4';
+            document.getElementById('btnradio2').nextElementSibling.style.backgroundColor = 'transparent';
+            document.getElementById('btnradio2').nextElementSibling.style.borderColor = '#ced4da';
+            labels = ['รายรับแน่นอน', 'รายรับไม่แน่นอน'];
+            data = [5000, 5000];
+            backgroundColors = ['#05658B', '#B4E2F4'];
+        } else if (radioId === 'btnradio2' && radioElement.checked) {
+            labelElement.style.backgroundColor = '#FF8686';
+            labelElement.style.borderColor = '#FF8686';
+            document.getElementById('btnradio1').nextElementSibling.style.backgroundColor = 'transparent';
+            document.getElementById('btnradio1').nextElementSibling.style.borderColor = '#ced4da';
 
-        // กำหนด labels, data, และสีสำหรับกราฟเมื่อเป็นรายจ่าย
-        labels = ['รายจ่ายจำเป็น', 'รายจ่ายไม่จำเป็น'];
-        data = [4000, 6000];
-        backgroundColors = ['#F56C6C', '#F8ED75'];
+            // กำหนด labels, data, และสีสำหรับกราฟเมื่อเป็นรายจ่าย
+            labels = ['รายจ่ายจำเป็น', 'รายจ่ายไม่จำเป็น'];
+            data = [1500, 500];
+            backgroundColors = ['#F56C6C', '#F8ED75'];
+        }
+
+        myDoughnutChart.data.labels = labels;
+        myDoughnutChart.data.datasets[0].data = data;
+        myDoughnutChart.data.datasets[0].backgroundColor = backgroundColors;
+        myDoughnutChart.update();
     }
-
-    myDoughnutChart.data.labels = labels;
-    myDoughnutChart.data.datasets[0].data = data;
-    myDoughnutChart.data.datasets[0].backgroundColor = backgroundColors;
-    myDoughnutChart.update();
-}
-
-
 
     const ctx = document.getElementById('myChart');
 
@@ -271,7 +264,6 @@
             labels: ['รายรับแน่นอน', 'รายรับไม่แน่นอน'],
             datasets: [{
                 label: 'จำนวนเงิน',
-                data: [5000, 5000],
                 borderWidth: 1,
                 backgroundColor: ['#05658B', '#B4E2F4']
                 // กำหนดสีของแต่ละส่วนของ Doughnut Chart
@@ -280,11 +272,6 @@
         options: {
             cutoutPercentage: 50, // กำหนดเปอร์เซ็นต์ของรัศมีที่จะถูกตัดออก
             responsive: true, // ทำให้กราฟปรับขนาดตามขนาดหน้าจอ
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
         }
     });
     </script>
