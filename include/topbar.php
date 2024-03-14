@@ -3,11 +3,12 @@
         <a class="navbar-brand" href="#">
             <img src="img/logo.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-top">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="home.php">หน้าหลัก</a>
                 </li>
@@ -20,8 +21,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="auto_save.php">บันทึกอัตโนมัติ</a>
                 </li>
-                
-                <li class="nav-item dropdown ">
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         <i class="bi bi-person-circle"></i> หน้าตาดี ทรัพย์จาง
